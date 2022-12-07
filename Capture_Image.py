@@ -27,8 +27,7 @@ def is_number(s):
 # Take image function
  
 def takeImages():
- 
- 
+
     Id = input("Enter Your Id: ")
     name = input("Enter Your Name: ")
  
@@ -37,7 +36,7 @@ def takeImages():
         harcascadePath = "haarcascade_frontalface_default.xml"
         detector = cv2.CascadeClassifier(harcascadePath)
         sampleNum = 0
- 
+
         while(True):
             ret, img = cam.read()
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -67,6 +66,6 @@ def takeImages():
         csvFile.close()
     else:
         if(is_number(Id)):
-            print("Enter Alphabetical Name")
-        if(name.isalpha()):
             print("Enter Numeric ID")
+        if(name.isalpha()):
+            print("Enter Alphabetical Name")
