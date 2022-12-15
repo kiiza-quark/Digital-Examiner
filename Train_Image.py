@@ -44,7 +44,6 @@ def TrainImages():
     recognizer.save("TrainingImageLabel"+os.sep+"Trainner.yml")
     print("All Images")
  
-# Optional, adds a counter for images trained (You can remove it)
 def counter_img(path):
     imgcounter = 1
     imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
